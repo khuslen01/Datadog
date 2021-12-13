@@ -23,7 +23,7 @@ app.debug = True
 api = Api(app)
 
 
-api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
+# api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
 
 # response = requests.get("https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b")
 
