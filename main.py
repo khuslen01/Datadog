@@ -25,7 +25,7 @@ api = Api(app)
 
 # api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
 
-response1 = requests.get("https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b")
+response1 = requests.get("https://api.datadoghq.com/api/v1/check_run?api_key=8d26c547b6a075490cc26faaacf12a9b")
 
 test_url = 'https://api.github.com'
 gg = urlopen(test_url)
