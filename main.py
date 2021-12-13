@@ -50,8 +50,9 @@ def webhook():
     return data
 
 
+
 @app.route('/hha', methods=['GET'])
-def webhook():
+def webhook1():
     data1 = response1.json()
     return data1
     # print(data)
