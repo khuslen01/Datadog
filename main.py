@@ -3,6 +3,7 @@ from flask_restful import Api, Resource
 from flask import jsonify
 import requests
 import json
+import datadog_api_client
 import datadog_api_client.v1
 import time, random
 import csv
