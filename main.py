@@ -15,6 +15,7 @@ import json
 
 from datadog_api_client.v1 import ApiClient, Configuration
 from datadog_api_client.v1.api.webhooks_integration_api import WebhooksIntegrationApi
+from datadog_api_client.v1.api.authentication_api import AuthenticationApi
 from datadog_api_client.v1.model.webhooks_integration import WebhooksIntegration
 
 
@@ -26,7 +27,7 @@ api = Api(app)
 
 # api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
 
-response1 = requests.get("https://api.datadoghq.com/api/v1/check_run?api_key=8d26c547b6a075490cc26faaacf12a9b")
+response1 = requests.get("https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b")
 
 test_url = 'https://api.github.com'
 gg = urlopen(test_url)
@@ -54,6 +55,12 @@ def webhook():
 
 @app.route('/hha', methods=['GET'])
 def webhook1():
+    configuration = Configuration()
+    with ApiClient(configuration) as api_client:
+        api_instance = AuthenticationApi(api_client)
+        response2 = api_instance.validate()
+
+    print(response2)
     data1 = response1.json()
     return data1
     # print(data)
