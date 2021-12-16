@@ -26,7 +26,7 @@ api = Api(app)
 
 
 configuration = datadog_api_client.v1.Configuration(
-    host = "https:khuslen.e@Admin0130_//app.datadoghq.com/"
+    host = "https://khuslen.e:Open0411_@app.datadoghq.com/"
 )
 
 # api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
