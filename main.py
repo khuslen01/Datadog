@@ -25,6 +25,10 @@ app.debug = True
 api = Api(app)
 
 
+configuration = datadog_api_client.v1.Configuration(
+    host = "https://app.datadoghq.com/"
+)
+
 # api_url = 'https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b'
 
 response1 = requests.get("https://api.datadoghq.com/api/v1/test?api_key=8d26c547b6a075490cc26faaacf12a9b")
@@ -55,11 +59,10 @@ def webhook():
 
 @app.route('/hha', methods=['GET'])
 def webhook1():
-    configuration = Configuration()
-    with ApiClient(configuration) as api_client:
-        api_instance = AuthenticationApi(api_client)
-        response2 = api_instance.validate()
-
+    # configuration = Configuration()
+    # with ApiClient(configuration) as api_client:
+    #     api_instance = AuthenticationApi(api_client)
+    #     response2 = api_instance.validate()
     print(response2)
     data1 = response1.json()
     return data1
