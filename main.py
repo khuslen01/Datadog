@@ -54,11 +54,11 @@ def bla():
 def webhook():
     data = response.json()
     return data
-    
 
 
 
-@app.route('/hha', methods=['GET'])
+
+@app.route('/hha', methods=['POST'])
 def webhook1():
     # configuration = Configuration()
     # with ApiClient(configuration) as api_client:
